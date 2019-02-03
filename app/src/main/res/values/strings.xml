@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MTG_App</string>
+    <string name="player_life_DECREASE">Decrease</string>
+    <string name="player_life_INCREASE">Increase</string>
 </resources>
