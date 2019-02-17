@@ -10,6 +10,39 @@
     <android.support.v4.view.ViewPager
         android:id="@+id/container"
         android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <fragment
+        android:id="@+id/player1Fragment"
+        class="com.example.yeti.mtg_app.Player_1_Fragment"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-         />
+        app:layout_constraintVertical_bias=".5"
+        tools:layout="@layout/fragment_player_1_health"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        ></fragment>
+
+    <fragment
+        android:id="@+id/player2Fragment"
+        class="com.example.yeti.mtg_app.Player_2_Fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintHorizontal_bias=".5"
+        app:layout_constraintBottom_toBottomOf="@+id/container"
+        tools:layout="@layout/fragment_player_2_health"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="parent"
+        ></fragment>
+
 </android.support.constraint.ConstraintLayout>
