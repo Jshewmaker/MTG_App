@@ -3,7 +3,6 @@ package com.example.yeti.mtg_app;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.ViewParent;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,4 +30,5 @@ public class MainActivity extends AppCompatActivity {
 
         viewPager.setAdapter(adapter);
     }
+    //this is a test comment
 }
