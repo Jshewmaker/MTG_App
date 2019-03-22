@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         SectionsPageAdapter adapter = new SectionsPageAdapter(getSupportFragmentManager());
 
         adapter.addFragment(new Player_1_Fragment(), "Player 1");
-        //adapter.addFragment(new Player_2_Fragment(), "Player 2");
+        adapter.addFragment(new Player_2_Fragment(), "Player 2");
 
         viewPager.setAdapter(adapter);
     }
