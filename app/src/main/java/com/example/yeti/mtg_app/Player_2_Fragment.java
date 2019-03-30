@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Player_2_Fragment extends Fragment {
@@ -15,6 +16,7 @@ public class Player_2_Fragment extends Fragment {
 
     private Button btn_increase;
     private Button btn_decrease;
+    private TextView tv_LifeTotal;
 
     @Nullable
     @Override
@@ -22,10 +24,15 @@ public class Player_2_Fragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_player_2_health, container, false);
         btn_increase = view.findViewById(R.id.player_2_increase);
         btn_decrease = view.findViewById(R.id.player_2_decrease);
+        tv_LifeTotal = view.findViewById(R.id.life_total);
+
 
         btn_increase.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                int currentTotal = Integer.valueOf((tv_LifeTotal.getText().toString()));
+                currentTotal += 1;
+                tv_LifeTotal.setText(Integer.toString(currentTotal));
                 Toast.makeText(getActivity(), "Player 2 Increase",Toast.LENGTH_SHORT).show();
             }
         });
@@ -33,6 +40,9 @@ public class Player_2_Fragment extends Fragment {
         btn_decrease.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                int currentTotal = Integer.valueOf((tv_LifeTotal.getText().toString()));
+                currentTotal -= 1;
+                tv_LifeTotal.setText(Integer.toString(currentTotal));
                 Toast.makeText(getActivity(), "Player 2 Decrease",Toast.LENGTH_SHORT).show();
             }
         });
