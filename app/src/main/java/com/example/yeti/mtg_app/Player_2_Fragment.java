@@ -33,7 +33,7 @@ public class Player_2_Fragment extends Fragment {
                 int currentTotal = Integer.valueOf((tv_LifeTotal.getText().toString()));
                 currentTotal += 1;
                 tv_LifeTotal.setText(Integer.toString(currentTotal));
-                Toast.makeText(getActivity(), "Player 2 Increase",Toast.LENGTH_SHORT).show();
+               // Toast.makeText(getActivity(), "Player 2 Increase",Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -43,7 +43,7 @@ public class Player_2_Fragment extends Fragment {
                 int currentTotal = Integer.valueOf((tv_LifeTotal.getText().toString()));
                 currentTotal -= 1;
                 tv_LifeTotal.setText(Integer.toString(currentTotal));
-                Toast.makeText(getActivity(), "Player 2 Decrease",Toast.LENGTH_SHORT).show();
+              //  Toast.makeText(getActivity(), "Player 2 Decrease",Toast.LENGTH_SHORT).show();
             }
         });
 
